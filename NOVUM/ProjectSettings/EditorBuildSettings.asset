@@ -8,13 +8,19 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/GoogleARCore/Examples/AugmentedImage/Scenes/AugmentedImage.unity
     guid: be567d47d3ab94b3badc5b211f535a24
-  - enabled: 1
+  - enabled: 0
     path: Assets/ScenesFolder/NETWORKTEST.unity
     guid: 4ec148c7fb5794444a0e7d3cc9850cc5
   - enabled: 0
     path: Assets/ScenesFolder/NOVUM.unity
     guid: ab8e52eb8769246348be1b8a594a067c
-  - enabled: 1
+  - enabled: 0
     path: Assets/ScenesFolder/ConnectionScene.unity
     guid: 5654b5f7f12ac4ab7b998bb60b4b95e7
+  - enabled: 0
+    path: Assets/ScenesFolder/Main_LoadingScene.unity
+    guid: 8c86e386f4b51465082a692c300d729e
+  - enabled: 1
+    path: Assets/ScenesFolder/Novum_AR.unity
+    guid: c7cf99419f29c49afbc0aac8494819ee
   m_configObjects: {}

@@ -30,7 +30,7 @@ namespace GoogleARCore.Examples.AugmentedImage
     /// <summary>
     /// Uses 4 frame corner objects to visualize an AugmentedImage.
     /// </summary>
-    public class AugmentedImageVisualizer : MonoBehaviour
+    public class AugmentedImageVisualizerORIG : MonoBehaviour
     {
         /// <summary>
         /// The AugmentedImage to visualize.
