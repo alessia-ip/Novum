@@ -42,6 +42,18 @@ namespace GoogleARCore.Examples.AugmentedImage
 
         public GameObject video;
 
+        public GameObject landingPad;
+
+        public GameObject ship;
+
+        public void Start()
+        {
+            empty.SetActive(false);
+            video.SetActive(false);
+            landingPad.SetActive(false);
+            ship.SetActive(false);
+        }
+
         public void Update()
         {
             if (Image == null || Image.TrackingState != TrackingState.Tracking)
@@ -53,6 +65,22 @@ namespace GoogleARCore.Examples.AugmentedImage
             if (Image.Name == "best")
             {
                 video.SetActive(true);
+                //Pose _centerPose = Image.CenterPose;
+                //video.transform.localPosition = _centerPose.position;
+                return;
+
+            }
+            if (Image.Name == "ship")
+            {
+                ship.SetActive(true);
+                //Pose _centerPose = Image.CenterPose;
+                //video.transform.localPosition = _centerPose.position;
+                return;
+
+            }
+            if (Image.Name == "landingPad")
+            {
+                landingPad.SetActive(true);
                 //Pose _centerPose = Image.CenterPose;
                 //video.transform.localPosition = _centerPose.position;
                 return;

@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="Assets\AR_Controller_Planes.cs" />
     <Compile Include="Assets\AR_Events.cs" />
+    <Compile Include="Assets\ARonlyEvents.cs" />
     <Compile Include="Assets\GoogleARCore\Examples\AugmentedImage\Scripts\AugmentedImageExampleController.cs" />
     <Compile Include="Assets\GoogleARCore\Examples\AugmentedImage\Scripts\AugmentedImageVisualizer.cs" />
     <Compile Include="Assets\GoogleARCore\Examples\Common\Scripts\DetectedPlaneGenerator.cs" />

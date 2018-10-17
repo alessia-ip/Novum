@@ -1,12 +1,13 @@
 ﻿<Properties StartupConfiguration="{778A65C4-4A90-C181-6A6A-E2909ADE6F86}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/GoogleARCore/Examples/AugmentedImage/Scripts/AugmentedImageExampleController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/ARonlyEvents.cs">
     <Files>
       <File FileName="Assets/AR_Events.cs" Line="27" Column="39" />
       <File FileName="Assets/GoogleARCore/Examples/AugmentedImage/Scripts/AugmentedImageExampleController.cs" Line="95" Column="55" />
       <File FileName="Assets/GoogleARCore/Examples/AugmentedImage/Scripts/AugmentedImageVisualizer.cs" Line="76" Column="111" />
-      <File FileName="Assets/Scripts/AugmentedImageVisualizer.cs" Line="57" Column="72" />
+      <File FileName="Assets/Scripts/AugmentedImageVisualizer.cs" Line="69" Column="64" />
       <File FileName="Assets/Scripts/MyVisualizer.cs" Line="51" Column="10" />
+      <File FileName="Assets/ARonlyEvents.cs" Line="4" Column="11" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
