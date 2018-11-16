@@ -341,6 +341,27 @@
     <Reference Include="UnityEditor.OSXStandalone.Extensions">
       <HintPath>/Applications/Unity/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll</HintPath>
     </Reference>
+    <Reference Include="Telepathy">
+      <HintPath>/Users/Alessia/Documents/NOVUM/Assets/Mirror/Plugins/Telepathy.dll</HintPath>
+    </Reference>
+    <Reference Include="Mirror.Editor">
+      <HintPath>/Users/Alessia/Documents/NOVUM/Assets/Mirror/Plugins/Editor/Mirror.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Mirror.Weaver">
+      <HintPath>/Users/Alessia/Documents/NOVUM/Assets/Mirror/Plugins/Editor/Mirror.Weaver.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Cecil">
+      <HintPath>/Users/Alessia/Documents/NOVUM/Assets/Mirror/Plugins/Editor/Unity.Cecil/Unity.Cecil.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Cecil.Mdb">
+      <HintPath>/Users/Alessia/Documents/NOVUM/Assets/Mirror/Plugins/Editor/Unity.Cecil/Unity.Cecil.Mdb.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Cecil.Pdb">
+      <HintPath>/Users/Alessia/Documents/NOVUM/Assets/Mirror/Plugins/Editor/Unity.Cecil/Unity.Cecil.Pdb.dll</HintPath>
+    </Reference>
+    <Reference Include="Mirror.Runtime">
+      <HintPath>/Users/Alessia/Documents/NOVUM/Assets/Mirror/Plugins/Runtime-Editor/Mirror.Runtime.dll</HintPath>
+    </Reference>
     <Reference Include="Google.IOSResolver_v1.2.64.0">
       <HintPath>/Users/Alessia/Documents/NOVUM/Assets/PlayServicesResolver/Editor/Google.IOSResolver_v1.2.64.0.dll</HintPath>
     </Reference>

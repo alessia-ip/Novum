@@ -26,6 +26,7 @@ namespace GoogleARCore.Examples.AugmentedImage
     using GoogleARCore;
     using GoogleARCoreInternal;
     using UnityEngine;
+    using UnityEngine.Video;
 
 
     public class AugmentedImageVisualizer : MonoBehaviour
@@ -59,30 +60,26 @@ namespace GoogleARCore.Examples.AugmentedImage
             if (Image == null || Image.TrackingState != TrackingState.Tracking)
             {
                 empty.SetActive(false);
-                video.SetActive(false);
+                //video.SetActive(false);
+                landingPad.SetActive(false);
+                ship.SetActive(false);
                 return;
             }
             if (Image.Name == "best")
             {
                 video.SetActive(true);
-                //Pose _centerPose = Image.CenterPose;
-                //video.transform.localPosition = _centerPose.position;
                 return;
 
             }
             if (Image.Name == "ship")
             {
                 ship.SetActive(true);
-                //Pose _centerPose = Image.CenterPose;
-                //video.transform.localPosition = _centerPose.position;
                 return;
 
             }
             if (Image.Name == "landingPad")
             {
                 landingPad.SetActive(true);
-                //Pose _centerPose = Image.CenterPose;
-                //video.transform.localPosition = _centerPose.position;
                 return;
 
             }

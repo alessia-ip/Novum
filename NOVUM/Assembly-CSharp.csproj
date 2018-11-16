@@ -194,7 +194,11 @@
     <Compile Include="Assets\GoogleARCore\SDK\Scripts\XPTrackingState.cs" />
     <Compile Include="Assets\HUD.cs" />
     <Compile Include="Assets\Main_HUD.cs" />
+    <Compile Include="Assets\Mirror\Example - Movement\Scripts\Move.cs" />
+    <Compile Include="Assets\Mirror\Example - Pong\Scripts\Ball.cs" />
+    <Compile Include="Assets\Mirror\Example - Pong\Scripts\Player.cs" />
     <Compile Include="Assets\Novum_DISCOVERY.cs" />
+    <Compile Include="Assets\ObjectHoverBounce.cs" />
     <Compile Include="Assets\Scripts\AugmentedImageVisualizer.cs" />
     <Compile Include="Assets\Scripts\DestroyIfOutOfView.cs" />
     <Compile Include="Assets\Scripts\GameEvents.cs" />
@@ -202,13 +206,18 @@
     <Compile Include="Assets\Scripts\MyVisualizer.cs" />
     <Compile Include="Assets\Scripts\PlayerTest.cs" />
     <Compile Include="Assets\Shaders\ObscureScript.cs" />
+    <Compile Include="Assets\spinnerScript.cs" />
     <None Include="Assets\GoogleARCore\Examples\Common\Materials\Shaders\PlaneGrid.shader" />
     <None Include="Assets\GoogleARCore\Examples\Common\Materials\Shaders\MobileDiffuseWithLightEstimation.shader" />
     <None Include="Assets\GoogleARCore\SDK\Materials\ARBackground.shader" />
+    <None Include="Assets\Workplace Tools\README.txt" />
+    <None Include="Assets\Mirror\Example - Movement\Models\(Public Domain) Quandtum BA-2\readme.txt" />
     <None Include="Assets\GoogleARCore\Examples\Common\Materials\Shaders\PointCloud.shader" />
     <None Include="Assets\GoogleARCore\Examples\ComputerVision\Materials\EdgeDetectionBackground.shader" />
     <None Include="Assets\Shaders\InvisibleMask.shader" />
     <None Include="Assets\GoogleARCore\Examples\Common\Materials\Shaders\MobileSpecularWithLightEstimation.shader" />
+    <None Include="Assets\Mirror\Readme.txt" />
+    <None Include="Assets\Mirror\License.txt" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>/Users/Alessia/Documents/NOVUM/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
@@ -418,6 +427,12 @@
     </Reference>
     <Reference Include="UnityEngine.SpatialTracking">
       <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
+    </Reference>
+    <Reference Include="Telepathy">
+      <HintPath>/Users/Alessia/Documents/NOVUM/Assets/Mirror/Plugins/Telepathy.dll</HintPath>
+    </Reference>
+    <Reference Include="Mirror.Runtime">
+      <HintPath>/Users/Alessia/Documents/NOVUM/Assets/Mirror/Plugins/Runtime-Editor/Mirror.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Analytics">
       <HintPath>/Users/Alessia/Library/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll</HintPath>

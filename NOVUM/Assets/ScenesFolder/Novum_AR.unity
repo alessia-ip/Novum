@@ -710,10 +710,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   narrator: {fileID: 1044765016}
-  video: {fileID: 0}
-  vidFinish: {fileID: 0}
-  ship: {fileID: 0}
-  landingPad: {fileID: 0}
+  ship: {fileID: 1970537452563670, guid: 9d2b155a1e8b94108bbbc7d6c456e4eb, type: 2}
+  landingPad: {fileID: 1162407036300484, guid: 9d2b155a1e8b94108bbbc7d6c456e4eb, type: 2}
   instructions: {fileID: 8300000, guid: e3d65b78be8544da1b2d54f74b4fb05a, type: 3}
   congratulations: {fileID: 8300000, guid: ed969c52f993e4602a74a511c2e7cb84, type: 3}
 --- !u!114 &1644071334
@@ -893,84 +891,6 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1910600096}
   m_CullTransparentMesh: 0
---- !u!1001 &1998926735
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4584514964126258, guid: 9d2b155a1e8b94108bbbc7d6c456e4eb, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4584514964126258, guid: 9d2b155a1e8b94108bbbc7d6c456e4eb, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4584514964126258, guid: 9d2b155a1e8b94108bbbc7d6c456e4eb, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4584514964126258, guid: 9d2b155a1e8b94108bbbc7d6c456e4eb, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4584514964126258, guid: 9d2b155a1e8b94108bbbc7d6c456e4eb, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4584514964126258, guid: 9d2b155a1e8b94108bbbc7d6c456e4eb, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4584514964126258, guid: 9d2b155a1e8b94108bbbc7d6c456e4eb, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4584514964126258, guid: 9d2b155a1e8b94108bbbc7d6c456e4eb, type: 2}
-      propertyPath: m_RootOrder
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 114203276533569354, guid: 9d2b155a1e8b94108bbbc7d6c456e4eb,
-        type: 2}
-      propertyPath: ship
-      value: 
-      objectReference: {fileID: 1998926736}
-    - target: {fileID: 114203276533569354, guid: 9d2b155a1e8b94108bbbc7d6c456e4eb,
-        type: 2}
-      propertyPath: landingPad
-      value: 
-      objectReference: {fileID: 1998926737}
-    - target: {fileID: 1389803843711186, guid: 9d2b155a1e8b94108bbbc7d6c456e4eb, type: 2}
-      propertyPath: m_TagString
-      value: Ship
-      objectReference: {fileID: 0}
-    - target: {fileID: 1162407036300484, guid: 9d2b155a1e8b94108bbbc7d6c456e4eb, type: 2}
-      propertyPath: m_TagString
-      value: landing
-      objectReference: {fileID: 0}
-    - target: {fileID: 1844521234580694, guid: 9d2b155a1e8b94108bbbc7d6c456e4eb, type: 2}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
-    - target: {fileID: 1600838289195196, guid: 9d2b155a1e8b94108bbbc7d6c456e4eb, type: 2}
-      propertyPath: m_TagString
-      value: videoPlayer
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 9d2b155a1e8b94108bbbc7d6c456e4eb, type: 2}
-  m_IsPrefabAsset: 0
---- !u!1 &1998926736 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1970537452563670, guid: 9d2b155a1e8b94108bbbc7d6c456e4eb,
-    type: 2}
-  m_PrefabInternal: {fileID: 1998926735}
---- !u!1 &1998926737 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1162407036300484, guid: 9d2b155a1e8b94108bbbc7d6c456e4eb,
-    type: 2}
-  m_PrefabInternal: {fileID: 1998926735}
 --- !u!1 &2004565646
 GameObject:
   m_ObjectHideFlags: 0

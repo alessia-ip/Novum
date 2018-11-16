@@ -21,6 +21,7 @@
 namespace GoogleARCore.Examples.AugmentedImage
 {
     using System.Collections.Generic;
+    using System.Collections;
     using System.Runtime.InteropServices;
     using GoogleARCore;
     using UnityEngine;
@@ -80,6 +81,18 @@ namespace GoogleARCore.Examples.AugmentedImage
                     visualizer.Image = image;
                     m_Visualizers.Add(image.DatabaseIndex, visualizer);
                 }
+                else if (image.TrackingState == TrackingState.Tracking && visualizer != null)
+                {
+                    //StopCoroutine("Thing");
+                    //m_Visualizers.Remove(image.DatabaseIndex);
+                    //GameObject.Destroy(visualizer.gameObject);
+                    // Create an anchor to ensure that ARCore keeps tracking this augmented image.
+                    Anchor anchor = image.CreateAnchor(image.CenterPose);
+                    StartCoroutine(Thing(anchor, visualizer));
+                    //visualizer.transform.position = Vector3.MoveTowards(transform.position, anchor.transform.position, 1 * Time.deltaTime);
+                    //visualizer.Image = image;
+                    //m_Visualizers.Add(image.DatabaseIndex, visualizer);
+                }
                 else if (image.TrackingState == TrackingState.Stopped && visualizer != null)
                 {
                     m_Visualizers.Remove(image.DatabaseIndex);
@@ -98,6 +111,15 @@ namespace GoogleARCore.Examples.AugmentedImage
             }
 
             FitToScanOverlay.SetActive(true);
+        }
+        IEnumerator Thing(Anchor anchor, AugmentedImageVisualizer visualizer)
+        {
+           // yield return new WaitForSeconds(1);
+            while (Vector3.Distance(transform.position, anchor.transform.position) < 0.05f)
+            {
+                visualizer.transform.position = Vector3.MoveTowards(transform.position, anchor.transform.position, 0.2f * Time.deltaTime);
+            }
+            yield break;
         }
     }
 }

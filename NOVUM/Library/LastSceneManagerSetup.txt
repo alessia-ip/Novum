@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/ScenesFolder/Novum_AR.unity
+- path: Assets/ScenesFolder/AssetTest.unity
   isLoaded: 1
   isActive: 1
