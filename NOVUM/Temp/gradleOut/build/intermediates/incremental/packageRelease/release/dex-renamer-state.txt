@@ -1,0 +1,4 @@
+#Fri Nov 30 04:39:06 EST 2018
+base.0=/Users/Alessia/Documents/NOVUM/Temp/gradleOut/build/intermediates/transforms/dex/release/0
+path.0=classes.dex
+renamed.0=classes.dex

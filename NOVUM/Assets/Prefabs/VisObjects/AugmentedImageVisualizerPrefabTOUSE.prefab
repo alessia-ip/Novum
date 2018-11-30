@@ -698,8 +698,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   empty: {fileID: 1724503000939226, guid: 90c13a6434b5d40b7b2f4cb8e1bbae4b, type: 2}
   video: {fileID: 1153717205007142}
-  landingPad: {fileID: 1162407036300484}
-  ship: {fileID: 1970537452563670}
+  one: {fileID: 1102160112165344, guid: 8d640f54e01ac4137980aad4968993a8, type: 2}
+  two: {fileID: 1306288182470314, guid: 8d640f54e01ac4137980aad4968993a8, type: 2}
+  three: {fileID: 1014659608544890, guid: 8d640f54e01ac4137980aad4968993a8, type: 2}
+  four: {fileID: 1395848042574272, guid: 8d640f54e01ac4137980aad4968993a8, type: 2}
+  five: {fileID: 1538477710818460, guid: 8d640f54e01ac4137980aad4968993a8, type: 2}
+  six: {fileID: 1165883258217024, guid: 8d640f54e01ac4137980aad4968993a8, type: 2}
+  seven: {fileID: 1168057881980954, guid: 8d640f54e01ac4137980aad4968993a8, type: 2}
+  eight: {fileID: 1999526578531980, guid: 8d640f54e01ac4137980aad4968993a8, type: 2}
+  nine: {fileID: 1561695599244470, guid: 8d640f54e01ac4137980aad4968993a8, type: 2}
+  ten: {fileID: 1514863569473908, guid: 8d640f54e01ac4137980aad4968993a8, type: 2}
+  eleven: {fileID: 1493829262007294, guid: 8d640f54e01ac4137980aad4968993a8, type: 2}
+  twelve: {fileID: 1030113878829524, guid: 8d640f54e01ac4137980aad4968993a8, type: 2}
+  bottomOne: {fileID: 1671811170794012, guid: 8d640f54e01ac4137980aad4968993a8, type: 2}
+  bottomTwo: {fileID: 1025497103901612, guid: 8d640f54e01ac4137980aad4968993a8, type: 2}
+  bottomThree: {fileID: 1117081249407802, guid: 8d640f54e01ac4137980aad4968993a8,
+    type: 2}
+  misc1: {fileID: 1951457362418368, guid: 8d640f54e01ac4137980aad4968993a8, type: 2}
+  misc2: {fileID: 0}
 --- !u!328 &328556219503867608
 VideoPlayer:
   m_ObjectHideFlags: 1

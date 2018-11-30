@@ -710,10 +710,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   narrator: {fileID: 1044765016}
-  ship: {fileID: 1970537452563670, guid: 9d2b155a1e8b94108bbbc7d6c456e4eb, type: 2}
-  landingPad: {fileID: 1162407036300484, guid: 9d2b155a1e8b94108bbbc7d6c456e4eb, type: 2}
-  instructions: {fileID: 8300000, guid: e3d65b78be8544da1b2d54f74b4fb05a, type: 3}
-  congratulations: {fileID: 8300000, guid: ed969c52f993e4602a74a511c2e7cb84, type: 3}
+  instruct1: {fileID: 8300000, guid: c4117b75914124ab6a56eaba188f4602, type: 3}
+  instruct2: {fileID: 8300000, guid: cc8d56ca17dd54009ab2d0c98628336c, type: 3}
+  instruct3: {fileID: 8300000, guid: cd05f11dd4b714f90ab0bf38fd644d2c, type: 3}
+  instruct4: {fileID: 8300000, guid: 9e7a1288e2d04477f986ba443701a3f0, type: 3}
+  finalBest: {fileID: 8300000, guid: c30dcfedc043b42b298befde95685f90, type: 3}
+  finalMeh: {fileID: 8300000, guid: 57e7f3c5253404ac1b25168759d686ba, type: 3}
+  finalWorst: {fileID: 8300000, guid: a2cd0db1998bc445c859944dc9fcfebe, type: 3}
 --- !u!114 &1644071334
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -725,7 +728,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 492cc0813c4064ed79f2671a7c2633fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AugmentedImageVisualizerPrefab: {fileID: 114203276533569354, guid: 9d2b155a1e8b94108bbbc7d6c456e4eb,
+  AugmentedImageVisualizerPrefab: {fileID: 114625208994071020, guid: 8d640f54e01ac4137980aad4968993a8,
     type: 2}
   FitToScanOverlay: {fileID: 1910600096}
 --- !u!4 &1644071335

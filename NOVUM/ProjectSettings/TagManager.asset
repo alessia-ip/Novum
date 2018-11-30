@@ -8,6 +8,13 @@ TagManager:
   - landing
   - videoPlayer
   - videoHolder
+  - correct
+  - incorrect
+  - correct2
+  - incorrect2
+  - one
+  - two
+  - three
   layers:
   - Default
   - TransparentFX

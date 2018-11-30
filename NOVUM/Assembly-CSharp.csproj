@@ -198,7 +198,6 @@
     <Compile Include="Assets\Mirror\Example - Pong\Scripts\Ball.cs" />
     <Compile Include="Assets\Mirror\Example - Pong\Scripts\Player.cs" />
     <Compile Include="Assets\Novum_DISCOVERY.cs" />
-    <Compile Include="Assets\ObjectHoverBounce.cs" />
     <Compile Include="Assets\Scripts\AugmentedImageVisualizer.cs" />
     <Compile Include="Assets\Scripts\DestroyIfOutOfView.cs" />
     <Compile Include="Assets\Scripts\GameEvents.cs" />
@@ -206,7 +205,6 @@
     <Compile Include="Assets\Scripts\MyVisualizer.cs" />
     <Compile Include="Assets\Scripts\PlayerTest.cs" />
     <Compile Include="Assets\Shaders\ObscureScript.cs" />
-    <Compile Include="Assets\spinnerScript.cs" />
     <None Include="Assets\GoogleARCore\Examples\Common\Materials\Shaders\PlaneGrid.shader" />
     <None Include="Assets\GoogleARCore\Examples\Common\Materials\Shaders\MobileDiffuseWithLightEstimation.shader" />
     <None Include="Assets\GoogleARCore\SDK\Materials\ARBackground.shader" />

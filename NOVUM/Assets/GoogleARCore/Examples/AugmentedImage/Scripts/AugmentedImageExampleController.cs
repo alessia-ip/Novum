@@ -91,7 +91,7 @@ namespace GoogleARCore.Examples.AugmentedImage
                     StartCoroutine(Thing(anchor, visualizer));
                     //visualizer.transform.position = Vector3.MoveTowards(transform.position, anchor.transform.position, 1 * Time.deltaTime);
                     //visualizer.Image = image;
-                    //m_Visualizers.Add(image.DatabaseIndex, visualizer);
+                    m_Visualizers.Add(image.DatabaseIndex, visualizer);
                 }
                 else if (image.TrackingState == TrackingState.Stopped && visualizer != null)
                 {

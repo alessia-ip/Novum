@@ -31,13 +31,16 @@ public class ARonlyEvents : MonoBehaviour {
 
     int playerNum;
 
+
+    bool playing = false;
+
     //this audio source is attached to the main first person camera
     public AudioSource narrator;
 
 
     //These are the first two 'minigame' objects 
-    public GameObject ship;
-    public GameObject landingPad;
+    //public GameObject ship;
+    //public GameObject landingPad;
 
     int SCORE = 0;
 
@@ -48,18 +51,18 @@ public class ARonlyEvents : MonoBehaviour {
    // public GameObject answerThree;
 
 
-    public AudioClip instructions;
+    //public AudioClip instructions;
    // public AudioClip multipleChoice;
-    public AudioClip congratulations;
+    //public AudioClip congratulations;
 
 
     public AudioClip instruct1;
     public AudioClip instruct2;
     public AudioClip instruct3;
     public AudioClip instruct4;
-    public AudioClip instruct5;
-    public AudioClip betrayal;
-    public AudioClip nonReport;
+    //public AudioClip instruct5;
+   // public AudioClip betrayal;
+   // public AudioClip nonReport;
     public AudioClip finalBest;
     public AudioClip finalMeh;
     public AudioClip finalWorst;
@@ -73,52 +76,37 @@ public class ARonlyEvents : MonoBehaviour {
             startcore = true;
         }
 
-        //This was the original test code I had used to begin my connections. Leaving here to test for debugs in the future
-        /*     if (GameObject.FindWithTag("videoPlayer") && instructionPlay == false && vid == false){
-                 Debug.Log("playedaudio");
-                 narrator.PlayOneShot(instructions);
-                 GameObject.FindWithTag("videoHolder").SetActive(false);
-                 instructionPlay = true;
-             }
-
-             if (GameObject.FindWithTag("Ship") && GameObject.FindWithTag("landing"))
-             {
-                 if (GameObject.FindWithTag("Ship").GetComponent<BoxCollider>().bounds.Intersects(GameObject.FindWithTag("landing").GetComponent<BoxCollider>().bounds))
-                 {                 goal = true;             }         }
-
-             if(goal == true && congrats == false){
-                 narrator.PlayOneShot(congratulations);
-                 congrats = true;
-             } */
+       
 
         //Setting the player based on the initial scene objects
         if (GameObject.FindWithTag("videoPlayer") && instructionPlay == false && vid == false)
         {
-            if (GameObject.FindWithTag("PlayerOne")){
-                playerNum = 1;
-                narrator.PlayOneShot(instruct1);
-            }
-            if (GameObject.FindWithTag("PlayerOne"))
-            {
-                playerNum = 2;
-                narrator.PlayOneShot(instruct1);
-            }
+
+
+
+            narrator.PlayOneShot(instruct1);
+            instructionPlay = true;
+            StartCoroutine(SetOne());
         }
 
-        //player One events
-        if (playerNum == 1){
-            TestOne();
-            TestTwo();
-            TestThree();
+
+        TestOne();
+        TestTwo();
+        TestThree();
+        playing = false;
+
+    }
+
+    IEnumerator SetOne(){
+
+        yield return new WaitForSeconds(1);
+        if (playing == false)
+        {
+            narrator.PlayOneShot(instruct2, 0.7F);
+            playing = true;
         }
 
-        //player Two events
-        if (playerNum == 2){
-            TestOne();
-            TestTwo();
-            TestThree();
-        }
-
+        yield return new WaitForSeconds(5);
     }
 
     IEnumerator VideoLength()
@@ -128,119 +116,243 @@ public class ARonlyEvents : MonoBehaviour {
         vid = false;
     }
 
+    void TestOne()
+    {
+        if (GameObject.FindWithTag("three").activeSelf && completeOne == false)
+        {
+            answOne = true;
+            StartCoroutine(NextInstructions());
+            SCORE = SCORE + 1;
+        }
+        else if (GameObject.FindWithTag("two").activeSelf && completeOne == false)
+        {
+            answOne = false;
+            StartCoroutine(NextInstructions());
+        }
+        else if (GameObject.FindWithTag("one").activeSelf && completeOne == false)
+        {
+            answOne = false;
+            StartCoroutine(NextInstructions());
+        }
+    }
+
+
+    void TestTwo()
+    {
+        if (GameObject.FindWithTag("two").activeSelf && completeOne == false)
+        {
+            answTwo = true;
+            StartCoroutine(NextInstructions2());
+            SCORE = SCORE + 1;
+        }
+        else if (GameObject.FindWithTag("three").activeSelf && completeOne == false)
+        {
+            answOne = false;
+            StartCoroutine(NextInstructions2());
+        }
+        else if (GameObject.FindWithTag("one").activeSelf && completeOne == false)
+        {
+            answOne = false;
+            StartCoroutine(NextInstructions2());
+        }
+    }
+
+    void TestThree()
+    {
+        if (GameObject.FindWithTag("one").activeSelf && completeOne == false)
+        {
+            answThree = true;
+            StartCoroutine(NextInstructions3());
+            SCORE = SCORE + 1;
+        }
+        else if (GameObject.FindWithTag("two").activeSelf && completeOne == false)
+        {
+            answOne = false;
+            StartCoroutine(NextInstructions3());
+        }
+        else if (GameObject.FindWithTag("three").activeSelf && completeOne == false)
+        {
+            answOne = false;
+            StartCoroutine(NextInstructions3());
+        }
+    }
+
+
+    IEnumerator NextInstructions(){
+
+        if (playing == false)
+        {
+            narrator.PlayOneShot(instruct3, 0.7F);
+            playing = true;
+        }
+        completeOne = true;
+        yield return new WaitForSeconds(5);
+       
+    }
+
+    IEnumerator NextInstructions2()
+    {
+        if (playing == false)
+        {
+            narrator.PlayOneShot(instruct4, 0.7F);
+            playing = true;
+        }
+        completeTwo = true;
+        yield return new WaitForSeconds(5);
+
+    }
+
+    IEnumerator NextInstructions3()
+    {
+
+        completeThree = true;
+        yield return new WaitForSeconds(5);
+        FINAL();
+    }
+
+    void FINAL()
+    {
+       
+        if (SCORE == 3)
+        {
+            if (playing == false)
+            {
+                narrator.PlayOneShot(finalBest);
+                playing = true;
+            }
+        }
+        else if (SCORE == 0)
+        {
+            if (playing == false)
+            {
+                narrator.PlayOneShot(finalWorst);
+                playing = true;
+            }
+        }
+        else
+        {
+            if (playing == false)
+            {
+                narrator.PlayOneShot(finalMeh);
+                playing = true;
+            }
+        }
+    }
+
+
     //All the items to test for are listed below!
     //each of these is looking for specific active items based on the player
     //depending on which items the player activates, the results change
-    void TestOne(){
-        if (playerNum == 1){
-            if (GameObject.FindWithTag("correct1").activeSelf && completeOne == false)
-            {
-                answOne = true;
-                completeOne = true;
-                SCORE = SCORE + 1;
-            } else if (GameObject.FindWithTag("incorrect1").activeSelf && completeOne == false){
-                answOne = false;
-                completeOne = true;
+    /*   void TestOne(){
+            if (playerNum == 1){
+                if (GameObject.FindWithTag("correct1").activeSelf && completeOne == false)
+                {
+                    answOne = true;
+                    completeOne = true;
+                    SCORE = SCORE + 1;
+                } else if (GameObject.FindWithTag("incorrect1").activeSelf && completeOne == false){
+                    answOne = false;
+                    completeOne = true;
+                }
             }
+            if (playerNum == 2)
+            {
+                if (GameObject.FindWithTag("correct2").activeSelf && completeOne == false)
+                {
+                    answOne = true;
+                    completeOne = true;
+                    SCORE = SCORE + 1;
+                }
+                else if (GameObject.FindWithTag("incorrect2").activeSelf && completeOne == false)
+                {
+                    answOne = false;
+                    completeOne = true;
+                }
+            }
+
         }
-        if (playerNum == 2)
-        {
-            if (GameObject.FindWithTag("correct2").activeSelf && completeOne == false)
+
+        void TestTwo(){
+            if (playerNum == 1)
             {
-                answOne = true;
-                completeOne = true;
-                SCORE = SCORE + 1;
+                if (GameObject.FindWithTag("correct3").activeSelf && completeTwo == false)
+                {
+                    answOne = true;
+                    completeTwo = true;
+                    SCORE = SCORE + 1;
+                }
+                else if (GameObject.FindWithTag("incorrect3").activeSelf && completeTwo == false)
+                {
+                    answOne = false;
+                    completeTwo = true;
+                }
             }
-            else if (GameObject.FindWithTag("incorrect2").activeSelf && completeOne == false)
+            if (playerNum == 2)
             {
-                answOne = false;
-                completeOne = true;
+                if (GameObject.FindWithTag("correct4").activeSelf && completeTwo == false)
+                {
+                    answOne = true;
+                    completeTwo = true;
+                    SCORE = SCORE + 1;
+                }
+                else if (GameObject.FindWithTag("incorrect4").activeSelf && completeTwo == false)
+                {
+                    answOne = false;
+                    completeTwo = true;
+                }
             }
         }
 
-    }
+        //this last test is based on an item the other player gives to you
+        //It's not up to the player playing which one they get!
+        //see script for different options
+        void TestThree(){
+            if (playerNum == 1)
+            {
+                if (GameObject.FindWithTag("correct5").activeSelf && completeThree == false)
+                {
+                    answOne = true;
+                    completeThree = true;
+                    SCORE = SCORE + 1;
+                }
+                else if (GameObject.FindWithTag("incorrect5").activeSelf && completeThree == false)
+                {
+                    answOne = false;
+                    completeThree = true;
+                }
+            }
+            if (playerNum == 2)
+            {
+                if (GameObject.FindWithTag("correct6").activeSelf && completeThree == false)
+                {
+                    answOne = true;
+                    completeThree = true;
+                    SCORE = SCORE + 1;
+                }
+                else if (GameObject.FindWithTag("incorrect6").activeSelf && completeThree == false)
+                {
+                    answOne = false;
+                    completeThree = true;
+                }
+            }
+        }
 
-    void TestTwo(){
-        if (playerNum == 1)
-        {
-            if (GameObject.FindWithTag("correct3").activeSelf && completeTwo == false)
-            {
-                answOne = true;
-                completeTwo = true;
-                SCORE = SCORE + 1;
+        //this is what the player hears at the end of the game, depending on how they did, and what their partner did
+        void FINAL(){
+            if (completeOne == true && completeTwo == true && completeThree == true){
+                if(answThree == false){
+                    narrator.PlayOneShot(nonReport);
+                } else if (answThree == true){
+                    narrator.PlayOneShot(betrayal);
+                }
             }
-            else if (GameObject.FindWithTag("incorrect3").activeSelf && completeTwo == false)
-            {
-                answOne = false;
-                completeTwo = true;
+            if (SCORE == 3){
+                narrator.PlayOneShot(finalBest);
+            } else if (SCORE == 0){
+                narrator.PlayOneShot(finalWorst);
+            } else {
+                narrator.PlayOneShot(finalMeh);
             }
-        }
-        if (playerNum == 2)
-        {
-            if (GameObject.FindWithTag("correct4").activeSelf && completeTwo == false)
-            {
-                answOne = true;
-                completeTwo = true;
-                SCORE = SCORE + 1;
-            }
-            else if (GameObject.FindWithTag("incorrect4").activeSelf && completeTwo == false)
-            {
-                answOne = false;
-                completeTwo = true;
-            }
-        }
-    }
-
-    //this last test is based on an item the other player gives to you
-    //It's not up to the player playing which one they get!
-    //see script for different options
-    void TestThree(){
-        if (playerNum == 1)
-        {
-            if (GameObject.FindWithTag("correct5").activeSelf && completeThree == false)
-            {
-                answOne = true;
-                completeThree = true;
-                SCORE = SCORE + 1;
-            }
-            else if (GameObject.FindWithTag("incorrect5").activeSelf && completeThree == false)
-            {
-                answOne = false;
-                completeThree = true;
-            }
-        }
-        if (playerNum == 2)
-        {
-            if (GameObject.FindWithTag("correct6").activeSelf && completeThree == false)
-            {
-                answOne = true;
-                completeThree = true;
-                SCORE = SCORE + 1;
-            }
-            else if (GameObject.FindWithTag("incorrect6").activeSelf && completeThree == false)
-            {
-                answOne = false;
-                completeThree = true;
-            }
-        }
-    }
-
-    //this is what the player hears at the end of the game, depending on how they did, and what their partner did
-    void FINAL(){
-        if (completeOne == true && completeTwo == true && completeThree == true){
-            if(answThree == false){
-                narrator.PlayOneShot(nonReport);
-            } else if (answThree == true){
-                narrator.PlayOneShot(betrayal);
-            }
-        }
-        if (SCORE == 3){
-            narrator.PlayOneShot(finalBest);
-        } else if (SCORE == 0){
-            narrator.PlayOneShot(finalWorst);
-        } else {
-            narrator.PlayOneShot(finalMeh);
-        }
-    }
+        } */
 
 }

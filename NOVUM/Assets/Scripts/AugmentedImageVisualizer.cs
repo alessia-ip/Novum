@@ -42,44 +42,177 @@ namespace GoogleARCore.Examples.AugmentedImage
         public GameObject empty;
 
         public GameObject video;
+        public GameObject one;
+        public GameObject two;
+        public GameObject three;
+        public GameObject four;
+        public GameObject five;
+        public GameObject six;
+        public GameObject seven;
+        public GameObject eight;
+        public GameObject nine;
+        public GameObject ten;
+        public GameObject eleven;
+        public GameObject twelve;
 
-        public GameObject landingPad;
+        public GameObject bottomOne;
+        public GameObject bottomTwo;
+        public GameObject bottomThree;
 
-        public GameObject ship;
+        public GameObject misc1;
+        public GameObject misc2;
 
         public void Start()
         {
             empty.SetActive(false);
             video.SetActive(false);
-            landingPad.SetActive(false);
-            ship.SetActive(false);
+            one.SetActive(false);
+            two.SetActive(false);
+            three.SetActive(false);
+            four.SetActive(false);
+            five.SetActive(false);
+            six.SetActive(false);
+            seven.SetActive(false);
+            eight.SetActive(false);
+            nine.SetActive(false);
+            ten.SetActive(false);
+            eleven.SetActive(false);
+            twelve.SetActive(false);
+            bottomOne.SetActive(false);
+            bottomTwo.SetActive(false);
+            bottomThree.SetActive(false);
+
         }
 
         public void Update()
         {
+
             if (Image == null || Image.TrackingState != TrackingState.Tracking)
             {
                 empty.SetActive(false);
+                one.SetActive(false);
+                two.SetActive(false);
+                three.SetActive(false);
+                four.SetActive(false);
+                five.SetActive(false);
+                six.SetActive(false);
+                seven.SetActive(false);
+                eight.SetActive(false);
+                nine.SetActive(false);
+                ten.SetActive(false);
+                eleven.SetActive(false);
+                twelve.SetActive(false);
+                bottomOne.SetActive(false);
+                bottomTwo.SetActive(false);
+                bottomThree.SetActive(false);
                 //video.SetActive(false);
-                landingPad.SetActive(false);
-                ship.SetActive(false);
                 return;
             }
-            if (Image.Name == "best")
+            if (Image.Name == "IntroVideo")
             {
                 video.SetActive(true);
                 return;
 
             }
-            if (Image.Name == "ship")
+            if (Image.Name == "ImageTargetOne")
             {
-                ship.SetActive(true);
+                one.SetActive(true);
                 return;
 
             }
-            if (Image.Name == "landingPad")
+            if (Image.Name == "ImageTargetTwo")
             {
-                landingPad.SetActive(true);
+                two.SetActive(true);
+                return;
+
+            }
+            if (Image.Name == "ImageTargetThree")
+            {
+                three.SetActive(true);
+                return;
+
+            }
+            if (Image.Name == "ImageTargetFour")
+            {
+                four.SetActive(true);
+                return;
+
+            }
+            if (Image.Name == "ImageTargetFive")
+            {
+                five.SetActive(true);
+                return;
+
+            }
+            if (Image.Name == "ImageTargetSix")
+            {
+                six.SetActive(true);
+                return;
+
+            }
+            if (Image.Name == "ImageTargetSeven")
+            {
+                seven.SetActive(true);
+                return;
+
+            }
+            if (Image.Name == "ImageTargetEight")
+            {
+                eight.SetActive(true);
+                return;
+
+            }
+            if (Image.Name == "ImageTargetNine")
+            {
+                nine.SetActive(true);
+                return;
+
+            }
+            if (Image.Name == "ImageTargetTen")
+            {
+                ten.SetActive(true);
+                return;
+
+            }
+            if (Image.Name == "FinalImagesEleven")
+            {
+                eleven.SetActive(true);
+                return;
+
+            }
+            if (Image.Name == "ImageTargetTwelve")
+            {
+                twelve.SetActive(true);
+                return;
+
+            }
+            if (Image.Name == "AmbientTargetOne")
+            {
+                misc1.SetActive(true);
+                return;
+
+            }
+            if (Image.Name == "AmbientTargetTwo")
+            {
+                misc2.SetActive(true);
+                return;
+
+            }
+            if (Image.Name == "ImageTargetBaseOne")
+            {
+                bottomOne.SetActive(true);
+                return;
+
+            }
+            if (Image.Name == "ImageTargetBaseTwo")
+            {
+                bottomTwo.SetActive(true);
+                return;
+
+            }
+            if (Image.Name == "ImageTargetBaseThree")
+            {
+                bottomThree.SetActive(true);
                 return;
 
             }
