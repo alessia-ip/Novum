@@ -20,7 +20,19 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/ScenesFolder/Main_LoadingScene.unity
     guid: 8c86e386f4b51465082a692c300d729e
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: Assets/ScenesFolder/AssetTest.unity
+    guid: 93f7df951b2034406bc51bb840cf83e7
+  - enabled: 0
+    path: Assets/ScenesFolder/MacApp.unity
+    guid: f7086765eaab24926bd24d5cfa6aecb2
+  - enabled: 0
+    path: Assets/ScenesFolder/Novum_AR_PlayerTwo.unity
+    guid: ffffa08165a9447ccbbe7e9f0a189bd9
   - enabled: 1
-    path: Assets/ScenesFolder/Novum_AR.unity
-    guid: c7cf99419f29c49afbc0aac8494819ee
+    path: Assets/ScenesFolder/Novum_AR_PlayerOne.unity
+    guid: f1b3cba1c2d73414d8012796563df23c
   m_configObjects: {}

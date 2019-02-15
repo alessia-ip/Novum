@@ -15,6 +15,7 @@ TagManager:
   - one
   - two
   - three
+  - four
   layers:
   - Default
   - TransparentFX
