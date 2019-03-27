@@ -195,9 +195,6 @@
     <Compile Include="Assets\HUD.cs" />
     <Compile Include="Assets\MacPub.cs" />
     <Compile Include="Assets\Main_HUD.cs" />
-    <Compile Include="Assets\Mirror\Example - Movement\Scripts\Move.cs" />
-    <Compile Include="Assets\Mirror\Example - Pong\Scripts\Ball.cs" />
-    <Compile Include="Assets\Mirror\Example - Pong\Scripts\Player.cs" />
     <Compile Include="Assets\Novum_DISCOVERY.cs" />
     <Compile Include="Assets\PubNub\Builders\ChannelGroup\AddChannelsToChannelGroupRequestBuilder.cs" />
     <Compile Include="Assets\PubNub\Builders\ChannelGroup\DeleteChannelGroupRequestBuilder.cs" />
@@ -368,16 +365,18 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
     <Compile Include="Assets\Thesis2-Scripts\ARObjectSelfController_SCR.cs" />
+    <Compile Include="Assets\Thesis2-Scripts\ArtistIntro_SCR.cs" />
     <Compile Include="Assets\Thesis2-Scripts\GameControllerAndPubPublisher_SCR.cs" />
+    <None Include="Assets\Minimalist Free v2.3\Shaders\Minimalist Free Sky.shader" />
     <None Include="Assets\GoogleARCore\Examples\Common\Materials\Shaders\PlaneGrid.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\GoogleARCore\Examples\Common\Materials\Shaders\MobileDiffuseWithLightEstimation.shader" />
+    <None Include="Assets\Minimalist Free v2.3\Shaders\Minimalist Free Standard LWRP.shader" />
     <None Include="Assets\GoogleARCore\SDK\Materials\ARBackground.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\Workplace Tools\README.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
-    <None Include="Assets\Mirror\Example - Movement\Models\(Public Domain) Quandtum BA-2\readme.txt" />
     <None Include="Assets\GoogleARCore\Examples\Common\Materials\Shaders\PointCloud.shader" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Oswald-Bold - OFL.txt" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
@@ -392,12 +391,11 @@
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\Shaders\InvisibleMask.shader" />
+    <None Include="Assets\Minimalist Free v2.3\Shaders\Minimalist Free Standard.shader" />
     <None Include="Assets\GoogleARCore\Examples\Common\Materials\Shaders\MobileSpecularWithLightEstimation.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
-    <None Include="Assets\Mirror\Readme.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF.shader" />
-    <None Include="Assets\Mirror\License.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
@@ -610,12 +608,6 @@
     </Reference>
     <Reference Include="UnityEngine.SpatialTracking">
       <HintPath>/Users/Alessia/Dropbox (Personal)/UnityOldVersion/Unity/Unity.app/Contents/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
-    </Reference>
-    <Reference Include="Telepathy">
-      <HintPath>/Users/Alessia/GitHub/Novum-/NOVUM/Assets/Mirror/Plugins/Telepathy.dll</HintPath>
-    </Reference>
-    <Reference Include="Mirror.Runtime">
-      <HintPath>/Users/Alessia/GitHub/Novum-/NOVUM/Assets/Mirror/Plugins/Runtime-Editor/Mirror.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="BouncyCastle">
       <HintPath>/Users/Alessia/GitHub/Novum-/NOVUM/Assets/PubNub/ThirdParty/BouncyCastle.dll</HintPath>

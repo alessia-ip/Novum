@@ -72,6 +72,10 @@
     <Compile Include="Assets\GoogleARCore\SDK\Scripts\Editor\BackgroundJobExecutor.cs" />
     <Compile Include="Assets\GoogleARCore\SDK\Scripts\Editor\CloudAnchorPreprocessBuild.cs" />
     <Compile Include="Assets\GoogleARCore\SDK\Scripts\Editor\RequiredOptionalPreprocessBuild.cs" />
+    <Compile Include="Assets\Minimalist Free v2.3\Editor\EditorGUILayoutExtended.cs" />
+    <Compile Include="Assets\Minimalist Free v2.3\Editor\MinimalistClipboard.cs" />
+    <Compile Include="Assets\Minimalist Free v2.3\Editor\MinimalistSkyEditor.cs" />
+    <Compile Include="Assets\Minimalist Free v2.3\Editor\MinimalistStandardEditor.cs" />
     <Compile Include="Assets\PubNub\Editor\AutoBuilder.cs" />
     <Compile Include="Assets\PubNub\Editor\ChannelGroupBuildRequestsTests.cs" />
     <Compile Include="Assets\PubNub\Editor\DeleteMessagesBuildRequestsTests.cs" />
@@ -360,27 +364,6 @@
     </Reference>
     <Reference Include="UnityEditor.OSXStandalone.Extensions">
       <HintPath>/Users/Alessia/Dropbox (Personal)/UnityOldVersion/Unity/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll</HintPath>
-    </Reference>
-    <Reference Include="Telepathy">
-      <HintPath>/Users/Alessia/GitHub/Novum-/NOVUM/Assets/Mirror/Plugins/Telepathy.dll</HintPath>
-    </Reference>
-    <Reference Include="Mirror.Editor">
-      <HintPath>/Users/Alessia/GitHub/Novum-/NOVUM/Assets/Mirror/Plugins/Editor/Mirror.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Mirror.Weaver">
-      <HintPath>/Users/Alessia/GitHub/Novum-/NOVUM/Assets/Mirror/Plugins/Editor/Mirror.Weaver.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Cecil">
-      <HintPath>/Users/Alessia/GitHub/Novum-/NOVUM/Assets/Mirror/Plugins/Editor/Unity.Cecil/Unity.Cecil.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Cecil.Mdb">
-      <HintPath>/Users/Alessia/GitHub/Novum-/NOVUM/Assets/Mirror/Plugins/Editor/Unity.Cecil/Unity.Cecil.Mdb.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Cecil.Pdb">
-      <HintPath>/Users/Alessia/GitHub/Novum-/NOVUM/Assets/Mirror/Plugins/Editor/Unity.Cecil/Unity.Cecil.Pdb.dll</HintPath>
-    </Reference>
-    <Reference Include="Mirror.Runtime">
-      <HintPath>/Users/Alessia/GitHub/Novum-/NOVUM/Assets/Mirror/Plugins/Runtime-Editor/Mirror.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Google.IOSResolver_v1.2.64.0">
       <HintPath>/Users/Alessia/GitHub/Novum-/NOVUM/Assets/PlayServicesResolver/Editor/Google.IOSResolver_v1.2.64.0.dll</HintPath>
