@@ -21,9 +21,6 @@ EditorBuildSettings:
     path: Assets/ScenesFolder/Main_LoadingScene.unity
     guid: 8c86e386f4b51465082a692c300d729e
   - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
     path: Assets/ScenesFolder/AssetTest.unity
     guid: 93f7df951b2034406bc51bb840cf83e7
   - enabled: 0
@@ -32,7 +29,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/ScenesFolder/Novum_AR_PlayerTwo.unity
     guid: ffffa08165a9447ccbbe7e9f0a189bd9
-  - enabled: 1
+  - enabled: 0
     path: Assets/ScenesFolder/Novum_AR_PlayerOne.unity
     guid: f1b3cba1c2d73414d8012796563df23c
+  - enabled: 1
+    path: Assets/ScenesFolder/FinalThesisScene.unity
+    guid: a76ed19e455fb4324b3d3da555031082
   m_configObjects: {}

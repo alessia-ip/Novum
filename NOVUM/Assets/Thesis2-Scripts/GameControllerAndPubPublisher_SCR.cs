@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using PubNubAPI;
 using UnityEngine.UI;
-using UnityEngine.iOS;
+using UnityEngine.SceneManagement;
 
 public class GameControllerAndPubPublisher_SCR : MonoBehaviour {
 
@@ -11,8 +11,6 @@ public class GameControllerAndPubPublisher_SCR : MonoBehaviour {
     PubNub pubnub;
     List<string> listChannelGroups;
     List<string> listChannels;
-    public GameObject answered;
-    private Text answer;
 
     //PubNub player number - set this up in editor
     public string playerNumber;
@@ -22,18 +20,18 @@ public class GameControllerAndPubPublisher_SCR : MonoBehaviour {
 
     //Game variables
 
-    //question one answer. If they answered with option 1, it's a 1. If option 2, it's a 2. 0 is for no answer yet.
-    [HideInInspector]
-    public int questionOne = 0;
+    //bad answer = 3 good answer = 2
+    public int counter = 0;
 
-    [HideInInspector]
-    public int questionTwo = 0;
-
-    [HideInInspector]
-    public int touchScreen = 0;
+    // best - 4
+    // second - 5
+    // worst = 6
 
     [HideInInspector]
     public bool snitchedOn;
+
+    public AudioClip doubt;
+    public bool heardDoubt = false;
 
     // ___________________________________________________________________
 
@@ -43,7 +41,19 @@ public class GameControllerAndPubPublisher_SCR : MonoBehaviour {
 
     public AudioClip doNotTouch;
 
+    public AudioClip waitforend;
 
+    //perfect answers, and not snitched on
+    public AudioClip ending_one;
+
+    //wrong answers or snitched on
+    public AudioClip ending_two;
+
+    private bool otherFinished;
+    private bool heardWait;
+
+
+    private bool heardFinalEnding = false;
 
     void Start () {
 
@@ -71,6 +81,29 @@ public class GameControllerAndPubPublisher_SCR : MonoBehaviour {
         //If the screen is touched at any point, do this
         if(Input.touchCount > 0){
             Handheld.Vibrate();
+            mainAudioSource.PlayOneShot(doNotTouch);
+        }
+
+        if (snitchedOn == true && heardDoubt == false){
+            mainAudioSource.PlayOneShot(doubt);
+        }
+
+        if(counter >= 4){
+            ieCaller("Finished");
+            if (otherFinished == false && heardWait == false){
+                mainAudioSource.PlayOneShot(waitforend);
+                heardWait = true;
+            } else if(otherFinished == true && heardFinalEnding == false){
+                if (snitchedOn == true || counter > 4){
+                    mainAudioSource.PlayOneShot(ending_two);
+                    heardFinalEnding = true;
+                    StartCoroutine(EndingTimer());
+                } else {
+                    mainAudioSource.PlayOneShot(ending_one);
+                    heardFinalEnding = true;
+                    StartCoroutine(EndingTimer());
+                }          
+            }
         }
 	}
 
@@ -92,9 +125,47 @@ public class GameControllerAndPubPublisher_SCR : MonoBehaviour {
             {
                 snitchedOn = false;
             }
+            if (RESULT == "Finished")
+            {
+                otherFinished = true;
+            }
         }
 
     }
 
 
+    public void ieCaller(string pubNubMessage){
+        StartCoroutine(SendingPubMessage(pubNubMessage));
+    }
+
+    private IEnumerator SendingPubMessage(string PubMessage)
+    {
+
+        pubnub.SusbcribeCallback += Pubnub_SusbcribeCallback;
+        print(Time.time);
+        yield return new WaitForSeconds(1);
+        print(Time.time);
+        pubnub.Publish()
+       .Channel("Novum")
+       .Message("hi")
+       .Async((result, status) =>
+       {
+           if (!status.Error)
+           {
+               Debug.Log(string.Format("Publish Timetoken: {0}", result.Timetoken));
+           }
+           else
+           {
+               Debug.Log(status.Error);
+               Debug.Log(status.ErrorData.Info);
+           }
+       });
+
+    }
+
+    IEnumerator EndingTimer(){
+        yield return new WaitForSeconds(10);
+        Scene scene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(scene.name);
+    }
 }

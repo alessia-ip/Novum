@@ -41,24 +41,28 @@ namespace GoogleARCore.Examples.AugmentedImage
         /// A model for the lower left corner of the frame to place when an image is detected.
         /// </summary>
         public GameObject empty;
-        public GameObject video;
-        public GameObject one;
-        public GameObject two;
-        public GameObject three;
-        public GameObject four;
-        public GameObject five;
+        public GameObject artist;
+        public GameObject personOne;
+        public GameObject personTwo;
+        public GameObject alienOne;
+        public GameObject alienTwo;
+        public GameObject campus;
+        public GameObject spaceShip;
 
+        GameObject uiOff;
 
-       
         public void Start()
         {
             empty.SetActive(false);
-            video.SetActive(false);
-            one.SetActive(false);
-            two.SetActive(false);
-            three.SetActive(false);
-            four.SetActive(false);
-            five.SetActive(false);
+            artist.SetActive(false);
+            personOne.SetActive(false);
+            personTwo.SetActive(false);
+            alienOne.SetActive(false);
+            alienTwo.SetActive(false);
+            campus.SetActive(false);
+            spaceShip.SetActive(false);
+
+            uiOff = GameObject.FindWithTag("StartingVideo");
 
         }
 
@@ -68,47 +72,58 @@ namespace GoogleARCore.Examples.AugmentedImage
             if (Image == null || Image.TrackingState != TrackingState.Tracking)
             {
                 empty.SetActive(false);
-                one.SetActive(false);
-                two.SetActive(false);
-                three.SetActive(false);
-                four.SetActive(false);
-                five.SetActive(false);
-
-                //video.SetActive(false);
+                artist.SetActive(false);
+                personOne.SetActive(false);
+                personTwo.SetActive(false);
+                alienOne.SetActive(false);
+                alienTwo.SetActive(false);
+                campus.SetActive(false);
+                spaceShip.SetActive(false);
                 return;
             }
-            if (Image.Name == "Intro")
-            {
-                video.SetActive(true);
-                return;
+            if (Image.Name == "Lanyard"){
+
+                uiOff.SetActive(false);
 
             }
-            if (Image.Name == "HandheldOne")
-            {
-                one.SetActive(true);
-                return;
 
-            }
-            if (Image.Name == "HandheldTwo")
+            if (Image.Name == "Artist")
             {
-                two.SetActive(true);
+                artist.SetActive(true);
                 return;
 
             }
-            if (Image.Name == "HandheldThree")
+            if (Image.Name == "AnswerThree")
             {
-                three.SetActive(true);
+                personOne.SetActive(true);
                 return;
 
             }
-            if (Image.Name == "HandheldFour")
+            if (Image.Name == "AnswerFour")
             {
-                four.SetActive(true);
+                personTwo.SetActive(true);
+                return;
+
+            }
+            if (Image.Name == "AnswerOne")
+            {
+                alienOne.SetActive(true);
+                return;
+
+            }
+            if (Image.Name == "AnswerTwo")
+            {
+                alienTwo.SetActive(true);
                 return;
             }
-            if (Image.Name == "AmbientMarker")
+            if (Image.Name == "Campus")
             {
-                five.SetActive(true);
+                campus.SetActive(true);
+                return;
+            }
+            if (Image.Name == "Ship")
+            {
+                spaceShip.SetActive(true);
                 return;
             }
         }

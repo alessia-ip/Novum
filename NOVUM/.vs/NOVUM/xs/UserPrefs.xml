@@ -1,16 +1,10 @@
 ﻿<Properties StartupConfiguration="{778A65C4-4A90-C181-6A6A-E2909ADE6F86}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Thesis2-Scripts/ArtistIntro_SCR.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Thesis2-Scripts/ARObjectSelfController_SCR.cs">
     <Files>
-      <File FileName="Assets/Scripts/AugmentedImageVisualizer.cs" Line="50" Column="1" />
-      <File FileName="Assets/RedBlueGames/TextTyper/RichTextTag.cs" Line="1" Column="1" />
-      <File FileName="Assets/PubNub_ARevents.cs" Line="92" Column="1" />
-      <File FileName="Assets/PubNubPlayerTwoEvents.cs" Line="190" Column="6" />
-      <File FileName="Assets/GoogleARCore/SDK/Scripts/ARCoreSessionConfig.cs" Line="105" Column="31" />
-      <File FileName="Assets/GoogleARCore/SDK/Scripts/ARCoreSession.cs" Line="54" Column="37" />
-      <File FileName="Assets/MacPub.cs" Line="65" Column="13" />
-      <File FileName="Assets/Thesis2-Scripts/ARObjectSelfController_SCR.cs" Line="9" Column="5" />
-      <File FileName="Assets/Thesis2-Scripts/GameControllerAndPubPublisher_SCR.cs" Line="90" Column="14" />
-      <File FileName="Assets/Thesis2-Scripts/ArtistIntro_SCR.cs" Line="7" Column="16" />
+      <File FileName="Assets/Scripts/AugmentedImageVisualizer.cs" Line="124" Column="36" />
+      <File FileName="Assets/Thesis2-Scripts/ARObjectSelfController_SCR.cs" Line="33" Column="32" />
+      <File FileName="Assets/Thesis2-Scripts/GameControllerAndPubPublisher_SCR.cs" Line="31" Column="8" />
+      <File FileName="Assets/Thesis2-Scripts/ArtistIntro_SCR.cs" Line="61" Column="35" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

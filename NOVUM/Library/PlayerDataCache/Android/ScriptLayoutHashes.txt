@@ -1,8 +1,8 @@
 Android
 PlayerPath?
-/Users/Alessia/Dropbox (Personal)/Thesis2/PlayerOne.apk
+/Users/Alessia/Dropbox (Personal)/Thesis2/PlayerTwo_FinalBuildTest.apk
 SceneListBegin?
-Assets/ScenesFolder/Novum_AR_PlayerOne.unity
+Assets/ScenesFolder/FinalThesisScene.unity
 SceneListEnd?
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:PubNubExample.Example
 c422dd62785a6d0afa870fbd111886ce Unity.TextMeshPro.dll:TMPro.TMP_SelectionCaret
@@ -137,10 +137,11 @@ e1ea12ca952c81d81a9a21fdf34446ed UnityEngine.HoloLens.dll:UnityEngine.EventSyste
 dfd33ff9ae3ce8d7ca1f22b475ec2387 UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
 a3c4f6168fdec1e9debee096e97ab787 Assembly-CSharp.dll:TMPro.Examples.TMP_TextEventCheck
 0485600ba1446e2b49b740dcbe5acee0 Assembly-CSharp.dll:GoogleARCore.Examples.HelloAR.HelloARController
+3b56d91b086975406bf38635fa978cbf Assembly-CSharp.dll:.ARObjectSelfController_SCR
 96f3ea9f23b6f08e60710ebb4af49174 Unity.TextMeshPro.dll:TMPro.TMP_SpriteAsset
 1655e5cbdafc3f52a798a8128c8c7c12 Assembly-CSharp.dll:TMPro.TMP_TextEventHandler
+6f2fccdfc6727f3d34254c50d94588b7 Assembly-CSharp.dll:.GameControllerAndPubPublisher_SCR
 34d219cdf8a72aef75c203b036a85318 Assembly-CSharp.dll:TMPro.Examples.Benchmark01
-44fabfe2b5540a7a84345925db955196 Assembly-CSharp.dll:.Move
 182e416670915c50a548c38c642db0d8 Vuforia.UnityExtensions.dll:Vuforia.AnchorBehaviour
 f35860350df72508419d9f9fcd288594 Vuforia.UnityExtensions.dll:Vuforia.AnchorInputListenerBehaviour
 182e416670915c50a548c38c642db0d8 Vuforia.UnityExtensions.dll:Vuforia.AnchorStageBehaviour
@@ -217,10 +218,9 @@ bb3f8ae71cc0b231bf331b52aca45ebd Assembly-CSharp.dll:TMPro.Examples.CameraContro
 7e7ee21ab8ff1f2eb206565d6caa2bfd Assembly-CSharp.dll:TMPro.Examples.VertexJitter
 486cd95c82d8305219c352c06b776e1f Unity.TextMeshPro.dll:TMPro.TMP_SpriteAnimator
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:GoogleARCore.Examples.Common.PointcloudVisualizer
-d3baf945a28bf6b4a4706c8193e7459e Assembly-CSharp.dll:.Ball
 eaf0bcdb10d442a4029d615f41d09957 Unity.TextMeshPro.dll:TMPro.TextContainer
 e5930b3f3763871ca43745d91dd968d4 Assembly-CSharp.dll:.ChatController
-0b8a5542b2e72cc86bd4e16daca29c24 Assembly-CSharp.dll:GoogleARCore.Examples.AugmentedImage.AugmentedImageVisualizer
+f2d37683885d292fa600e0eda1f9749e Assembly-CSharp.dll:GoogleARCore.Examples.AugmentedImage.AugmentedImageVisualizer
 da41848d1f6c865aec0a30a47eecd4d1 Assembly-CSharp.dll:PubNubAPI.PNUnityWebRequest
 d3985f23b121be7ae04a7237d84c9372 Assembly-CSharp.dll:TMPro.Examples.TMP_ExampleScript_01
 201273fb4f889724fb090164b7d6c657 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
@@ -286,10 +286,10 @@ eabb14b55dc317646709e1aaab0543fb Assembly-CSharp.dll:TMPro.Examples.Benchmark02
 9ecabe4a6b0b699f4890bde3b3e4b3b9 Assembly-CSharp.dll:TMPro.Examples.TMP_UiFrameRateCounter
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:TMPro.Examples.VertexColorCycler
 7e7ee21ab8ff1f2eb206565d6caa2bfd Assembly-CSharp.dll:TMPro.Examples.VertexZoom
+1db53c61df06e052bc5f40930718af8a Assembly-CSharp.dll:.ArtistIntro_SCR
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:GoogleARCore.Examples.ComputerVision.PointClickHandler
 e04611b8715e6833d2bd7010fc6be10b Unity.TextMeshPro.dll:TMPro.TMP_StyleSheet
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.DestroyIfOutOfView
-d3baf945a28bf6b4a4706c8193e7459e Assembly-CSharp.dll:.Player
 8ce712c004fddf1ebc65ee6757cd994e Assembly-CSharp.dll:TMPro.Examples.TMPro_InstructionOverlay
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.GameEvents
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:TMPro.Examples.TeleType
@@ -299,16 +299,6 @@ d3baf945a28bf6b4a4706c8193e7459e Assembly-CSharp.dll:.Player
 d6847627ba7741c18a9d5258fc293648 Assembly-CSharp.dll:TMPro.Examples.VertexShakeA
 dd223b2cbb523615eee8980d99d61ddd Assembly-CSharp.dll:.EnvMapAnimator
 555c3d1dc8417281e9a433d548148018 Assembly-CSharp.dll:.ARonlyEvents
-201273fb4f889724fb090164b7d6c657 Mirror.Runtime.dll:Mirror.NetworkAnimator
-486cd95c82d8305219c352c06b776e1f Mirror.Runtime.dll:Mirror.NetworkBehaviour
-3dca4e3a0b938c8643652748865d2430 Mirror.Runtime.dll:Mirror.NetworkIdentity
-4de3a9043ce4aeac0d1d1753570286da Mirror.Runtime.dll:Mirror.NetworkManager
-211268494e68f7d079886e88f3d3c929 Mirror.Runtime.dll:Mirror.NetworkManagerHUD
-6409350deec3028c583d5c216383488d Mirror.Runtime.dll:Mirror.NetworkProximityChecker
-486cd95c82d8305219c352c06b776e1f Mirror.Runtime.dll:Mirror.NetworkStartPosition
-529a95e9e8e7686c4816e08fbb37183f Mirror.Runtime.dll:Mirror.NetworkTransform
-fc061f3ae8a876c0687e86378d4a447c Mirror.Runtime.dll:Mirror.NetworkTransformChild
-7ca56e063bd071986fff4f513cc4f477 Mirror.Runtime.dll:Mirror.NetworkTransformVisualizer
 93307bd34e39d73fd24e00ec39c25a91 Unity.TextMeshPro.dll:TMPro.TMP_SubMesh
 182e416670915c50a548c38c642db0d8 Vuforia.UnityExtensions.dll:Vuforia.AnchorBehaviour
 f35860350df72508419d9f9fcd288594 Vuforia.UnityExtensions.dll:Vuforia.AnchorInputListenerBehaviour
@@ -343,16 +333,6 @@ aa5e3523afd7fd907d3f99da4b777fdc Vuforia.UnityExtensions.dll:Vuforia.VuforiaConf
 c8a41ce4eea7677f6dd2aa0e422a2f04 Vuforia.UnityExtensions.dll:Vuforia.VuMarkBehaviour
 c31ff9acb65f7a15b5c6fd77c3314d83 Vuforia.UnityExtensions.dll:Vuforia.WireframeBehaviour
 486cd95c82d8305219c352c06b776e1f Vuforia.UnityExtensions.dll:Vuforia.WireframeTrackableEventHandler
-201273fb4f889724fb090164b7d6c657 Mirror.Runtime.dll:Mirror.NetworkAnimator
-486cd95c82d8305219c352c06b776e1f Mirror.Runtime.dll:Mirror.NetworkBehaviour
-3dca4e3a0b938c8643652748865d2430 Mirror.Runtime.dll:Mirror.NetworkIdentity
-4de3a9043ce4aeac0d1d1753570286da Mirror.Runtime.dll:Mirror.NetworkManager
-211268494e68f7d079886e88f3d3c929 Mirror.Runtime.dll:Mirror.NetworkManagerHUD
-6409350deec3028c583d5c216383488d Mirror.Runtime.dll:Mirror.NetworkProximityChecker
-486cd95c82d8305219c352c06b776e1f Mirror.Runtime.dll:Mirror.NetworkStartPosition
-529a95e9e8e7686c4816e08fbb37183f Mirror.Runtime.dll:Mirror.NetworkTransform
-fc061f3ae8a876c0687e86378d4a447c Mirror.Runtime.dll:Mirror.NetworkTransformChild
-7ca56e063bd071986fff4f513cc4f477 Mirror.Runtime.dll:Mirror.NetworkTransformVisualizer
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.AR_Events
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.PubNubTest
 e79ce3c1c9ab1fb748298f390a104b84 Assembly-CSharp.dll:GoogleARCore.Examples.HelloAR.AR_Controller_Planes
