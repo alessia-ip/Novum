@@ -10,28 +10,50 @@ public class ARObjectSelfController_SCR : MonoBehaviour {
 
     public string PubString = "NULL";
 
-    public AudioSource audioSource_;
+    private AudioSource audioSource_;
 
     public AudioClip audioClip_;
     public AudioClip audioClip2_;
 
-    private bool triggerOnce = false;
+    public int qNum = 0;
 
     public int timer = 5;
 
-    public GameControllerAndPubPublisher_SCR gameControllerAndPubPublisher;
+    private GameControllerAndPubPublisher_SCR gameControllerAndPubPublisher;
+
+    private void Start()
+    {
+        gameControllerAndPubPublisher = GameObject.FindWithTag("GameController").GetComponent<GameControllerAndPubPublisher_SCR>();    
+    }
 
     private void OnEnable()
     {
-        if (triggerOnce == false){
-            if (PubString != "NULL" && PubTrigger == true)
+        audioSource_ = GameObject.FindWithTag("MainCamera").GetComponent<AudioSource>();
+
+
+        gameControllerAndPubPublisher = GameObject.FindWithTag("GameController").GetComponent<GameControllerAndPubPublisher_SCR>();
+        if (qNum == 1 && gameControllerAndPubPublisher.q1answered == false)
+        {
+            if (PubString != "NULL" && PubTrigger == true && gameControllerAndPubPublisher.q1answered == false)
             {
                 gameControllerAndPubPublisher.ieCaller(PubString);
             }
             audioSource_.PlayOneShot(audioClip_);
             gameControllerAndPubPublisher.counter = gameControllerAndPubPublisher.counter + answerNum;
-            triggerOnce = true;
-        } else {
+            gameControllerAndPubPublisher.q1answered = true;
+
+        } else if (qNum == 2 && gameControllerAndPubPublisher.q2answered == false)
+        {
+            if (PubString != "NULL" && PubTrigger == true && gameControllerAndPubPublisher.q2answered == false)
+            {
+                gameControllerAndPubPublisher.ieCaller(PubString);
+            }
+            audioSource_.PlayOneShot(audioClip_);
+            gameControllerAndPubPublisher.counter = gameControllerAndPubPublisher.counter + answerNum;
+            gameControllerAndPubPublisher.q2answered = true;
+
+        }
+        else {
             audioSource_.PlayOneShot(audioClip2_);
         }
 
@@ -40,7 +62,7 @@ public class ARObjectSelfController_SCR : MonoBehaviour {
     private void Update()
     {
         if(audioSource_.isPlaying != true){
-
+            StartCoroutine(CountDown());
         }
     }
 

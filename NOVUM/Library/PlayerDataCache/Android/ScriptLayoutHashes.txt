@@ -1,6 +1,6 @@
 Android
 PlayerPath?
-/Users/Alessia/Dropbox (Personal)/Thesis2/PlayerTwo_FinalBuildTest.apk
+/Users/Alessia/Dropbox (Personal)/Thesis2/FinalThesisBuilds/PlayerTwo.apk
 SceneListBegin?
 Assets/ScenesFolder/FinalThesisScene.unity
 SceneListEnd?
@@ -137,10 +137,10 @@ e1ea12ca952c81d81a9a21fdf34446ed UnityEngine.HoloLens.dll:UnityEngine.EventSyste
 dfd33ff9ae3ce8d7ca1f22b475ec2387 UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
 a3c4f6168fdec1e9debee096e97ab787 Assembly-CSharp.dll:TMPro.Examples.TMP_TextEventCheck
 0485600ba1446e2b49b740dcbe5acee0 Assembly-CSharp.dll:GoogleARCore.Examples.HelloAR.HelloARController
-3b56d91b086975406bf38635fa978cbf Assembly-CSharp.dll:.ARObjectSelfController_SCR
+4f1ebb2b588cc0069f110394e0855020 Assembly-CSharp.dll:.ARObjectSelfController_SCR
 96f3ea9f23b6f08e60710ebb4af49174 Unity.TextMeshPro.dll:TMPro.TMP_SpriteAsset
 1655e5cbdafc3f52a798a8128c8c7c12 Assembly-CSharp.dll:TMPro.TMP_TextEventHandler
-6f2fccdfc6727f3d34254c50d94588b7 Assembly-CSharp.dll:.GameControllerAndPubPublisher_SCR
+09a733ecc67b4c42ffbf31f7c9bb5a83 Assembly-CSharp.dll:.GameControllerAndPubPublisher_SCR
 34d219cdf8a72aef75c203b036a85318 Assembly-CSharp.dll:TMPro.Examples.Benchmark01
 182e416670915c50a548c38c642db0d8 Vuforia.UnityExtensions.dll:Vuforia.AnchorBehaviour
 f35860350df72508419d9f9fcd288594 Vuforia.UnityExtensions.dll:Vuforia.AnchorInputListenerBehaviour
@@ -286,7 +286,7 @@ eabb14b55dc317646709e1aaab0543fb Assembly-CSharp.dll:TMPro.Examples.Benchmark02
 9ecabe4a6b0b699f4890bde3b3e4b3b9 Assembly-CSharp.dll:TMPro.Examples.TMP_UiFrameRateCounter
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:TMPro.Examples.VertexColorCycler
 7e7ee21ab8ff1f2eb206565d6caa2bfd Assembly-CSharp.dll:TMPro.Examples.VertexZoom
-1db53c61df06e052bc5f40930718af8a Assembly-CSharp.dll:.ArtistIntro_SCR
+6e9a02d04989e246f9b341af5fbe29bf Assembly-CSharp.dll:.ArtistIntro_SCR
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:GoogleARCore.Examples.ComputerVision.PointClickHandler
 e04611b8715e6833d2bd7010fc6be10b Unity.TextMeshPro.dll:TMPro.TMP_StyleSheet
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.DestroyIfOutOfView

@@ -49,11 +49,29 @@ public class GameControllerAndPubPublisher_SCR : MonoBehaviour {
     //wrong answers or snitched on
     public AudioClip ending_two;
 
+    public bool q1answered = false;
+
+    public bool q2answered = false;
+
     private bool otherFinished;
     private bool heardWait;
 
 
     private bool heardFinalEnding = false;
+
+
+    private bool finishInvoke = false;
+
+
+    public bool instructOneHeard = false;
+
+
+
+    // ___________________________________________________________________
+
+    public GameObject No;
+    public GameObject Win;
+    public GameObject frown;
 
     void Start () {
 
@@ -79,31 +97,51 @@ public class GameControllerAndPubPublisher_SCR : MonoBehaviour {
 
 	void Update () {
         //If the screen is touched at any point, do this
-        if(Input.touchCount > 0){
+        if(Input.touchCount > 0 && mainAudioSource.isPlaying == false){
             Handheld.Vibrate();
             mainAudioSource.PlayOneShot(doNotTouch);
         }
 
-        if (snitchedOn == true && heardDoubt == false){
-            mainAudioSource.PlayOneShot(doubt);
+        if (mainAudioSource.isPlaying == false)
+        {
+            if (snitchedOn == true && heardDoubt == false)
+            {
+                mainAudioSource.PlayOneShot(doubt);
+                frown.SetActive(true);
+                heardDoubt = true;
+            }
         }
 
         if(counter >= 4){
-            ieCaller("Finished");
-            if (otherFinished == false && heardWait == false){
-                mainAudioSource.PlayOneShot(waitforend);
-                heardWait = true;
-            } else if(otherFinished == true && heardFinalEnding == false){
-                if (snitchedOn == true || counter > 4){
-                    mainAudioSource.PlayOneShot(ending_two);
-                    heardFinalEnding = true;
-                    StartCoroutine(EndingTimer());
-                } else {
-                    mainAudioSource.PlayOneShot(ending_one);
-                    heardFinalEnding = true;
-                    StartCoroutine(EndingTimer());
-                }          
+            if (finishInvoke == false){
+                ieCaller("Finished");
+                finishInvoke = true;
             }
+            if(mainAudioSource.isPlaying == false){
+                if (otherFinished == false && heardWait == false)
+                {
+                    mainAudioSource.PlayOneShot(waitforend);
+                    heardWait = true;
+                }
+                else if (otherFinished == true && heardFinalEnding == false)
+                {
+                    if (snitchedOn == true || counter > 4)
+                    {
+                        mainAudioSource.PlayOneShot(ending_two);
+                        heardFinalEnding = true;
+                        StartCoroutine(EndingTimer());
+                        No.SetActive(true);
+                    }
+                    else
+                    {
+                        mainAudioSource.PlayOneShot(ending_one);
+                        heardFinalEnding = true;
+                        StartCoroutine(EndingTimer());
+                        Win.SetActive(true);
+                    }
+                }
+            }
+            
         }
 	}
 
@@ -135,19 +173,20 @@ public class GameControllerAndPubPublisher_SCR : MonoBehaviour {
 
 
     public void ieCaller(string pubNubMessage){
+        Debug.Log("Invoked");
         StartCoroutine(SendingPubMessage(pubNubMessage));
     }
 
     private IEnumerator SendingPubMessage(string PubMessage)
     {
-
+        Debug.Log("MessageSent");
         pubnub.SusbcribeCallback += Pubnub_SusbcribeCallback;
         print(Time.time);
         yield return new WaitForSeconds(1);
         print(Time.time);
         pubnub.Publish()
        .Channel("Novum")
-       .Message("hi")
+     .Message(PubMessage)
        .Async((result, status) =>
        {
            if (!status.Error)

@@ -5,7 +5,7 @@ using UnityEngine;
 public class ArtistIntro_SCR : MonoBehaviour {
 
     //Audio
-    public AudioSource thisAudio;
+    private AudioSource thisAudio;
 
     public AudioClip FirstTimeInstruct;
     public AudioClip RepeatInstruct;
@@ -23,16 +23,27 @@ public class ArtistIntro_SCR : MonoBehaviour {
     //Variables
     bool executedOne = false;
 
-	void Start () {
+    private GameControllerAndPubPublisher_SCR gameControllerAndPubPublisher;
+
+
+    void Start () {
         headRend = ArtistHead.GetComponent<Renderer>();
 	}
 
 
     private void OnEnable()
     {
+        thisAudio = GameObject.FindWithTag("MainCamera").GetComponent<AudioSource>();
+
+        gameControllerAndPubPublisher = GameObject.FindWithTag("GameController").GetComponent<GameControllerAndPubPublisher_SCR>();
+
+        if (gameControllerAndPubPublisher.instructOneHeard == true){
+            executedOne = true;
+        }
+
         if (executedOne == false){
             thisAudio.PlayOneShot(FirstTimeInstruct);
-            executedOne = true;
+            gameControllerAndPubPublisher.instructOneHeard = true;
         } else {
             thisAudio.PlayOneShot(RepeatInstruct);
         }
