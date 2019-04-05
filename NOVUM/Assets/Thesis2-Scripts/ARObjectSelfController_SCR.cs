@@ -54,7 +54,9 @@ public class ARObjectSelfController_SCR : MonoBehaviour {
 
         }
         else {
-            audioSource_.PlayOneShot(audioClip2_);
+            if(audioSource_.isPlaying == false){
+                audioSource_.PlayOneShot(audioClip2_);
+            }
         }
 
     }

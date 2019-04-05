@@ -1,13 +1,14 @@
 ﻿<Properties StartupConfiguration="{778A65C4-4A90-C181-6A6A-E2909ADE6F86}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/GoogleARCore/SDK/Scripts/Anchor.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Resart_SCR.cs">
     <Files>
       <File FileName="Assets/Scripts/AugmentedImageVisualizer.cs" Line="124" Column="36" />
-      <File FileName="Assets/Thesis2-Scripts/ARObjectSelfController_SCR.cs" Line="31" Column="8" />
-      <File FileName="Assets/Thesis2-Scripts/GameControllerAndPubPublisher_SCR.cs" Line="98" Column="10" />
+      <File FileName="Assets/Thesis2-Scripts/ARObjectSelfController_SCR.cs" Line="58" Column="55" />
+      <File FileName="Assets/Thesis2-Scripts/GameControllerAndPubPublisher_SCR.cs" Line="208" Column="44" />
       <File FileName="Assets/Thesis2-Scripts/ArtistIntro_SCR.cs" Line="36" Column="18" />
       <File FileName="Assets/GoogleARCore/SDK/Scripts/ARCoreSession.cs" Line="7" Column="49" />
       <File FileName="Assets/GoogleARCore/SDK/Scripts/ARCoreSessionConfig.cs" Line="113" Column="67" />
       <File FileName="Assets/GoogleARCore/SDK/Scripts/Anchor.cs" Line="4" Column="49" />
+      <File FileName="Assets/Resart_SCR.cs" Line="12" Column="5" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
