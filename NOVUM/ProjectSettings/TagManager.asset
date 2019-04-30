@@ -17,6 +17,7 @@ TagManager:
   - three
   - four
   - StartingVideo
+  - VIZ
   layers:
   - Default
   - TransparentFX

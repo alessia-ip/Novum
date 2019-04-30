@@ -894,12 +894,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   empty: {fileID: 1724503000939226, guid: 90c13a6434b5d40b7b2f4cb8e1bbae4b, type: 2}
-  video: {fileID: 1728057980272048}
-  one: {fileID: 1992594325678230}
-  two: {fileID: 1912687656041824}
-  three: {fileID: 1299965094041280}
-  four: {fileID: 1845420785656258}
-  five: {fileID: 1845420785656258}
+  artist: {fileID: 0}
+  personOne: {fileID: 0}
+  personTwo: {fileID: 0}
+  alienOne: {fileID: 0}
+  alienTwo: {fileID: 0}
+  campus: {fileID: 0}
+  spaceShip: {fileID: 0}
+  tracking: 0
+  Book: {fileID: 0}
+  gameControllerAndPubPublisher_: {fileID: 0}
+  restart_: {fileID: 0}
 --- !u!135 &135324103986219206
 SphereCollider:
   m_ObjectHideFlags: 1

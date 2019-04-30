@@ -21,9 +21,12 @@ public class ARObjectSelfController_SCR : MonoBehaviour {
 
     private GameControllerAndPubPublisher_SCR gameControllerAndPubPublisher;
 
+
+    public GoogleARCore.Examples.AugmentedImage.AugmentedImageVisualizer augmentedImageVisualizer_src;
+
     private void Start()
     {
-        gameControllerAndPubPublisher = GameObject.FindWithTag("GameController").GetComponent<GameControllerAndPubPublisher_SCR>();    
+        gameControllerAndPubPublisher = GameObject.FindWithTag("GameController").GetComponent<GameControllerAndPubPublisher_SCR>();
     }
 
     private void OnEnable()
@@ -59,6 +62,12 @@ public class ARObjectSelfController_SCR : MonoBehaviour {
             }
         }
 
+    }
+
+    private void OnDisable()
+    {
+        gameControllerAndPubPublisher.tracking = false;
+        Debug.Log("Tracking re-enabled");
     }
 
     private void Update()

@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/ScenesFolder/FinalThesisScene.unity
+- path: Assets/ScenesFolder/GradExScene.unity
   isLoaded: 1
   isActive: 1

@@ -1,10 +1,11 @@
 Android
 PlayerPath?
-/Users/Alessia/Dropbox (Personal)/Thesis2/FinalThesisBuilds/PlayerOne_AutoFocus_V2.apk
+/Users/Alessia/Dropbox (Personal)/PlayerOne_GRADEX12.apk
 SceneListBegin?
-Assets/ScenesFolder/FinalThesisScene.unity
+Assets/ScenesFolder/GradExScene.unity
 SceneListEnd?
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:PubNubExample.Example
+486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.Resart_SCR
 c422dd62785a6d0afa870fbd111886ce Unity.TextMeshPro.dll:TMPro.TMP_SelectionCaret
 7b803eb2910e9b4cd5e521ae07b9f7d6 Unity.TextMeshPro.dll:TMPro.TMP_Dropdown
 486cd95c82d8305219c352c06b776e1f UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
@@ -94,6 +95,7 @@ a44114bd4fa541174f78b4bb92bacb48 UnityEngine.UI.dll:UnityEngine.EventSystems.Sta
 e90403eeda069970e0b9de1533de13a6 UnityEngine.UI.dll:UnityEngine.UI.ToggleGroup
 2d58ca16854b99daea8c45e9c0f367b7 UnityEngine.UI.dll:UnityEngine.EventSystems.TouchInputModule
 16da51d1b62ef6d4ee1849350434023b UnityEngine.UI.dll:UnityEngine.UI.VerticalLayoutGroup
+486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.reen
 ae4f711076d40c0ca454ab418fef71ec Assembly-CSharp.dll:GoogleARCore.Examples.ComputerVision.TextureReader
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.ObscureScript
 486cd95c82d8305219c352c06b776e1f UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
@@ -137,10 +139,10 @@ e1ea12ca952c81d81a9a21fdf34446ed UnityEngine.HoloLens.dll:UnityEngine.EventSyste
 dfd33ff9ae3ce8d7ca1f22b475ec2387 UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
 a3c4f6168fdec1e9debee096e97ab787 Assembly-CSharp.dll:TMPro.Examples.TMP_TextEventCheck
 0485600ba1446e2b49b740dcbe5acee0 Assembly-CSharp.dll:GoogleARCore.Examples.HelloAR.HelloARController
-4f1ebb2b588cc0069f110394e0855020 Assembly-CSharp.dll:.ARObjectSelfController_SCR
+a16ad765560d4f8b28010fe3c3d3c307 Assembly-CSharp.dll:.ARObjectSelfController_SCR
 96f3ea9f23b6f08e60710ebb4af49174 Unity.TextMeshPro.dll:TMPro.TMP_SpriteAsset
 1655e5cbdafc3f52a798a8128c8c7c12 Assembly-CSharp.dll:TMPro.TMP_TextEventHandler
-09a733ecc67b4c42ffbf31f7c9bb5a83 Assembly-CSharp.dll:.GameControllerAndPubPublisher_SCR
+6a1094e62feab887d929f57a44bf88be Assembly-CSharp.dll:.GameControllerAndPubPublisher_SCR
 34d219cdf8a72aef75c203b036a85318 Assembly-CSharp.dll:TMPro.Examples.Benchmark01
 182e416670915c50a548c38c642db0d8 Vuforia.UnityExtensions.dll:Vuforia.AnchorBehaviour
 f35860350df72508419d9f9fcd288594 Vuforia.UnityExtensions.dll:Vuforia.AnchorInputListenerBehaviour
@@ -220,7 +222,7 @@ bb3f8ae71cc0b231bf331b52aca45ebd Assembly-CSharp.dll:TMPro.Examples.CameraContro
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:GoogleARCore.Examples.Common.PointcloudVisualizer
 eaf0bcdb10d442a4029d615f41d09957 Unity.TextMeshPro.dll:TMPro.TextContainer
 e5930b3f3763871ca43745d91dd968d4 Assembly-CSharp.dll:.ChatController
-f2d37683885d292fa600e0eda1f9749e Assembly-CSharp.dll:GoogleARCore.Examples.AugmentedImage.AugmentedImageVisualizer
+9f68e9dcb86ea53d69d06b20fb7d21b1 Assembly-CSharp.dll:GoogleARCore.Examples.AugmentedImage.AugmentedImageVisualizer
 da41848d1f6c865aec0a30a47eecd4d1 Assembly-CSharp.dll:PubNubAPI.PNUnityWebRequest
 d3985f23b121be7ae04a7237d84c9372 Assembly-CSharp.dll:TMPro.Examples.TMP_ExampleScript_01
 201273fb4f889724fb090164b7d6c657 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
@@ -369,4 +371,3 @@ aa5e3523afd7fd907d3f99da4b777fdc Vuforia.UnityExtensions.dll:Vuforia.VuforiaConf
 c8a41ce4eea7677f6dd2aa0e422a2f04 Vuforia.UnityExtensions.dll:Vuforia.VuMarkBehaviour
 c31ff9acb65f7a15b5c6fd77c3314d83 Vuforia.UnityExtensions.dll:Vuforia.WireframeBehaviour
 486cd95c82d8305219c352c06b776e1f Vuforia.UnityExtensions.dll:Vuforia.WireframeTrackableEventHandler
-486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.Resart_SCR

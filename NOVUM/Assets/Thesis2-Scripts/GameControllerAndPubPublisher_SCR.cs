@@ -53,7 +53,7 @@ public class GameControllerAndPubPublisher_SCR : MonoBehaviour {
 
     public bool q2answered = false;
 
-    private bool otherFinished;
+    public bool otherFinished;
     private bool heardWait;
 
 
@@ -65,7 +65,7 @@ public class GameControllerAndPubPublisher_SCR : MonoBehaviour {
 
     public bool instructOneHeard = false;
 
-
+    public bool tracking;
 
     // ___________________________________________________________________
 
@@ -152,21 +152,32 @@ public class GameControllerAndPubPublisher_SCR : MonoBehaviour {
 
         SusbcribeEventEventArgs mea = e as SusbcribeEventEventArgs;
 
-        if (mea.MessageResult != null && mea.MessageResult.IssuingClientId.ToString() != playerNumber)
+        Debug.Log("recieved");
+
+
+        //&& mea.MessageResult.IssuingClientId.ToString() != playerNumber
+        if (mea.MessageResult != null)
         {
-            string RESULT = mea.MessageResult.Payload.ToString();
-            if (RESULT == "REPORTED")
-            {
-                snitchedOn = true;
+            if(mea.MessageResult.IssuingClientId.ToString() == playerNumber){
+                Debug.Log("WORKING");
+                return;
+            }else{
+                string RESULT = mea.MessageResult.Payload.ToString();
+                if (RESULT == "REPORTED")
+                {
+                    snitchedOn = true;
+                }
+                if (RESULT == "UNREPORTED")
+                {
+                    snitchedOn = false;
+                }
+                if (RESULT == "Finished")
+                {
+                    otherFinished = true;
+                    Debug.Log("recieved 2");
+                }
             }
-            if (RESULT == "UNREPORTED")
-            {
-                snitchedOn = false;
-            }
-            if (RESULT == "Finished")
-            {
-                otherFinished = true;
-            }
+           
         }
 
     }

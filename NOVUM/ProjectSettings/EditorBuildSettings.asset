@@ -32,7 +32,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/ScenesFolder/Novum_AR_PlayerOne.unity
     guid: f1b3cba1c2d73414d8012796563df23c
-  - enabled: 1
+  - enabled: 0
     path: Assets/ScenesFolder/FinalThesisScene.unity
     guid: a76ed19e455fb4324b3d3da555031082
+  - enabled: 1
+    path: Assets/ScenesFolder/GradExScene.unity
+    guid: 2cefa4783de2f48cda6794079b9c7197
   m_configObjects: {}

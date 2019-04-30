@@ -90,5 +90,11 @@ public class ArtistIntro_SCR : MonoBehaviour {
             headRend.material.mainTexture = Winking;
         }
     }
+    private void Update()
+    {
+        if(thisAudio.isPlaying == false){
+            this.gameObject.SetActive(false);
+        }
+    }
 
 }

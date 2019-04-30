@@ -11,10 +11,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53ac32fab2599402fb6d154adf4c1e40, type: 3}
   m_Name: AugmentedImagesSessionConfig
   m_EditorClassIdentifier: 
-  MatchCameraFramerate: 1
-  PlaneFindingMode: 1
-  EnableLightEstimation: 1
+  MatchCameraFramerate: 0
+  PlaneFindingMode: 0
+  EnableLightEstimation: 0
   EnableCloudAnchor: 0
-  AugmentedImageDatabase: {fileID: 11400000, guid: 02b5a7c34356542229596f0081aa6571,
+  AugmentedImageDatabase: {fileID: 11400000, guid: 4b25873427597401ebbfb0118499d4a5,
     type: 2}
   CameraFocusMode: 1

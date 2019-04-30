@@ -49,7 +49,20 @@ namespace GoogleARCore.Examples.AugmentedImage
         public GameObject campus;
         public GameObject spaceShip;
 
+
         GameObject uiOff;
+
+
+        //MORE GRAD EX CODE
+        public bool tracking = false;
+
+        public GameObject Book;
+
+        public GameControllerAndPubPublisher_SCR gameControllerAndPubPublisher_;
+
+        public Resart_SCR restart_;
+
+
 
         public void Start()
         {
@@ -64,10 +77,14 @@ namespace GoogleARCore.Examples.AugmentedImage
 
             uiOff = GameObject.FindWithTag("StartingVideo");
 
+            gameControllerAndPubPublisher_ = GameObject.FindWithTag("GameController").GetComponent<GameControllerAndPubPublisher_SCR>();
+            restart_ = GameObject.FindWithTag("GameController").GetComponent<Resart_SCR>();
         }
 
         public void Update()
         {
+
+            //SET A BOOL TO FALSE SO IT CAN ONLY BE RE-ACTIVATED WHEN TRUE//
 
             if (Image == null || Image.TrackingState != TrackingState.Tracking)
             {
@@ -81,51 +98,101 @@ namespace GoogleARCore.Examples.AugmentedImage
                 spaceShip.SetActive(false);
                 return;
             }
-            if (Image.Name == "Lanyard"){
+             
 
-                uiOff.SetActive(false);
+            if (gameControllerAndPubPublisher_.tracking == false){
+                if (Image.Name == "Lanyard")
+                {
 
+                    uiOff.SetActive(false);
+
+                }
+
+                if (Image.Name == "Artist")
+                {
+                    artist.SetActive(true);
+                    Debug.Log("Tracking disabled");
+                    this.gameObject.GetComponent<AugmentedImageVisualizer>().enabled = false;
+                    return;
+
+                }
+                if (Image.Name == "AnswerThree")
+                {
+                    personOne.SetActive(true);
+                    Debug.Log("Tracking disabled");
+                    gameControllerAndPubPublisher_.tracking = true;
+                    this.gameObject.GetComponent<AugmentedImageVisualizer>().enabled = false;
+                    return;
+
+                }
+                if (Image.Name == "AnswerFour")
+                {
+                    personTwo.SetActive(true);
+                    Debug.Log("Tracking disabled");
+                    gameControllerAndPubPublisher_.tracking = true;
+                    this.gameObject.GetComponent<AugmentedImageVisualizer>().enabled = false;
+                    return;
+
+                }
+                if (Image.Name == "AnswerOne")
+                {
+                    alienOne.SetActive(true);
+                    Debug.Log("Tracking disabled");
+                    gameControllerAndPubPublisher_.tracking = true;
+                    this.gameObject.GetComponent<AugmentedImageVisualizer>().enabled = false;
+                    return;
+
+                }
+                if (Image.Name == "AnswerTwo")
+                {
+                    alienTwo.SetActive(true);
+                    Debug.Log("Tracking disabled");
+                    gameControllerAndPubPublisher_.tracking = true;
+                    this.gameObject.GetComponent<AugmentedImageVisualizer>().enabled = false;
+                    return;
+                }
+                if (Image.Name == "Campus")
+                {
+                    campus.SetActive(true);
+                    Debug.Log("Tracking disabled");
+                    gameControllerAndPubPublisher_.tracking = true;
+                    this.gameObject.GetComponent<AugmentedImageVisualizer>().enabled = false;
+                    return;
+                }
+                if (Image.Name == "Ship")
+                {
+                    spaceShip.SetActive(true);
+                    Debug.Log("Tracking disabled");
+                    gameControllerAndPubPublisher_.tracking = true;
+                    this.gameObject.GetComponent<AugmentedImageVisualizer>().enabled = false;
+                    return;
+                }
+
+
+                /* added for grad ex */
+
+                if (Image.Name == "Books")
+                {
+                    Debug.Log("Tracking disabled");
+                    gameControllerAndPubPublisher_.tracking = true;
+                    this.gameObject.GetComponent<AugmentedImageVisualizer>().enabled = false;
+                    return;
+                }
+                if (Image.Name == "End")
+                {
+                    tracking = true;
+                    if (gameControllerAndPubPublisher_.counter >= 4)
+                    {
+                        gameControllerAndPubPublisher_.otherFinished = true;
+                    }
+                    else
+                    {
+                        restart_.Restart();
+                    }
+                    return;
+                }
             }
 
-            if (Image.Name == "Artist")
-            {
-                artist.SetActive(true);
-                return;
-
-            }
-            if (Image.Name == "AnswerThree")
-            {
-                personOne.SetActive(true);
-                return;
-
-            }
-            if (Image.Name == "AnswerFour")
-            {
-                personTwo.SetActive(true);
-                return;
-
-            }
-            if (Image.Name == "AnswerOne")
-            {
-                alienOne.SetActive(true);
-                return;
-
-            }
-            if (Image.Name == "AnswerTwo")
-            {
-                alienTwo.SetActive(true);
-                return;
-            }
-            if (Image.Name == "Campus")
-            {
-                campus.SetActive(true);
-                return;
-            }
-            if (Image.Name == "Ship")
-            {
-                spaceShip.SetActive(true);
-                return;
-            }
         }
     }
 }

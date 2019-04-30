@@ -322,6 +322,7 @@
     <Compile Include="Assets\RedBlueGames\TextTyper\RichTextTag.cs" />
     <Compile Include="Assets\RedBlueGames\TextTyper\TextTyper.cs" />
     <Compile Include="Assets\RedBlueGames\TextTyper\TypedTextGenerator.cs" />
+    <Compile Include="Assets\reen.cs" />
     <Compile Include="Assets\Resart_SCR.cs" />
     <Compile Include="Assets\Scripts\AugmentedImageVisualizer copy.cs" />
     <Compile Include="Assets\Scripts\AugmentedImageVisualizer.cs" />
