@@ -1,6 +1,6 @@
 Android
 PlayerPath?
-/Users/Alessia/Dropbox (Personal)/PlayerOne_GRADEX12.apk
+/Users/Alessia/Dropbox (Personal)/PlayerTwo_GRADEX13_FAST.apk
 SceneListBegin?
 Assets/ScenesFolder/GradExScene.unity
 SceneListEnd?
